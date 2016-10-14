@@ -28,7 +28,7 @@ class ElementsController < ApplicationController
 
     respond_to do |format|
       if @element.save
-        format.html { redirect_to @element, notice: 'Element was successfully created.' }
+        format.html { redirect_to @element, notice: 'Elemento creado exitosamente.' }
         format.json { render :show, status: :created, location: @element }
       else
         format.html { render :new }

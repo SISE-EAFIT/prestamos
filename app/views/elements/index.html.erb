@@ -20,9 +20,9 @@
         <td><%= element.name %></td>
         <td><%= element.description %></td>
         <td><%= element.loaned %></td>
-        <td><%= link_to 'Show', element %></td>
-        <td><%= link_to 'Edit', edit_element_path(element) %></td>
-        <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver detalle', element %></td>
+        <td><%= link_to 'Editar', edit_element_path(element) %></td>
+        <td><%= link_to 'Borrar', element, method: :delete, data: { confirm: 'Está seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
