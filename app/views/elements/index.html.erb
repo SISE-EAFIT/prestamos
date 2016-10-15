@@ -2,6 +2,14 @@
 
 <h1>Elementos</h1>
 
+<br>
+ <%= link_to new_element_path, class: 'btn btn-primary' do %>
+  <span class="glyphicon glyphicon-plus"></span>
+    Nuevo elemento
+  <% end %>
+
+<br>
+<br>
 <table class="table">
   <thead>
     <tr>
@@ -29,6 +37,6 @@
 </table>
 
 <br>
- <%= link_to 'Nuevo elemento', new_element_path %>
+
 
 

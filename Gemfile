@@ -31,6 +31,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#to generate scaffolds with bootstrap styles
+gem 'bootstrap-generators', '~> 3.3.4'
+
+#to use content_tag_for when we use scaffold
+ gem 'record_tag_helper', '~> 1.0'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
