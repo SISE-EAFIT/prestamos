@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :loans
   resources :post2s
   resources :posts
   resources :elements
