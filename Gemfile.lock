@@ -41,6 +41,8 @@ GEM
     arel (7.1.2)
     autoprefixer-rails (6.5.0.1)
       execjs
+    bootstrap-generators (3.3.4)
+      railties (>= 3.1.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -118,6 +120,8 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    record_tag_helper (1.0.0)
+      actionview (~> 5.x)
     sass (3.4.22)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -160,6 +164,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-generators (~> 3.3.4)
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
@@ -168,6 +173,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
+  record_tag_helper (~> 1.0)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -178,4 +184,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.12.5
+   1.13.0

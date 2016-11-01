@@ -2,13 +2,21 @@
 
 <h1>Elementos</h1>
 
-<table class="table">
+<br>
+ <%= link_to new_element_path, class: 'btn btn-primary' do %>
+  <span class="glyphicon glyphicon-plus"></span>
+    Nuevo elemento
+  <% end %>
+
+<br>
+<br>
+<table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Loaned</th>
+     <!--  <th>Id</th> -->
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Prestado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,19 +24,19 @@
   <tbody>
     <% @elements.each do |element| %>
       <tr>
-        <td><%= element.id %></td>
+        <!-- <td><%= element.id %></td> -->
         <td><%= element.name %></td>
         <td><%= element.description %></td>
         <td><%= element.loaned %></td>
-        <td><%= link_to 'Show', element %></td>
-        <td><%= link_to 'Edit', edit_element_path(element) %></td>
-        <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver detalle', element %></td>
+        <td><%= link_to 'Editar', edit_element_path(element) %></td>
+        <td><%= link_to 'Borrar', element, method: :delete, data: { confirm: 'Está seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
- <%= link_to 'Nuevo elemento', new_element_path %>
+
 
 

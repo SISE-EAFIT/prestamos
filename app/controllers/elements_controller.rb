@@ -28,7 +28,7 @@ class ElementsController < ApplicationController
 
     respond_to do |format|
       if @element.save
-        format.html { redirect_to @element, notice: 'Element was successfully created.' }
+        format.html { redirect_to @element, notice: 'Elemento creado exitosamente.' }
         format.json { render :show, status: :created, location: @element }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ElementsController < ApplicationController
   def update
     respond_to do |format|
       if @element.update(element_params)
-        format.html { redirect_to @element, notice: 'Element was successfully updated.' }
+        format.html { redirect_to @element, notice: 'Elemento actualizado exitosamente.' }
         format.json { render :show, status: :ok, location: @element }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ElementsController < ApplicationController
   def destroy
     @element.destroy
     respond_to do |format|
-      format.html { redirect_to elements_url, notice: 'Element was successfully destroyed.' }
+      format.html { redirect_to elements_url, notice: 'Elemento borrado exitosamente.' }
       format.json { head :no_content }
     end
   end
