@@ -1,9 +1,19 @@
-<<<<<<< HEAD
+<div class="page-header">
+  <%= link_to students_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  
+  <%= link_to edit_student_path(@student), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+</div>
+
 <div class="container">
   <h1> Datos del estudiante</h1>
   <p id="notice"><%= notice %></p>
   
-    
       <p>
         <strong>Identificación:</strong>
         <%= @student.id %>
@@ -29,40 +39,3 @@
         <%= @student.phone %>
       </p>
       
-      
-  
-  <%= link_to 'Editar', edit_student_path(@student) %> |
-  <%= link_to 'Regresar', students_path %>
-=======
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Id</strong>
-  <%= @student.id %>
-</p>
-
-<p>
-  <strong>Studentcode</strong>
-  <%= @student.studentCode %>
-</p>
-
-<p>
-  <strong>Name</strong>
-  <%= @student.name %>
-</p>
-
-<p>
-  <strong>Email</strong>
-  <%= @student.email %>
-</p>
-
-<p>
-  <strong>Phone</strong>
-  <%= @student.phone %>
-</p>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
->>>>>>> 71e0e2b7acdbb5030bc45bfc338ad13c735f40cb
-  
-

@@ -1,9 +1,9 @@
-<div class="container">
-
-<h1>Nuevo estudiante</h1>
+<div class="page-header">
+  <%= link_to students_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atras
+  <% end %>
+  <h1>Agregar estudiante</h1>
+</div>
 
 <%= render 'form', student: @student %>
-
-<%= link_to 'Back', students_path %>
-
-</div>
