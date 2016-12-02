@@ -9,7 +9,7 @@ class CreateStudents < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-    add_index :students, :id, unique: true
-    add_index :students, :studentCode, unique: true
+    #add_index :students, :id, unique: true
+    #add_index :students, :studentCode, unique: true
   end
 end

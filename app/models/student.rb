@@ -1,5 +1,6 @@
 class Student < ApplicationRecord
-  has_many :loans, dependent: :destroy
+  #has_many :loans, dependent: :destroy
+  has_many :lends, dependent: :destroy
   self.primary_key = 'id'
   validates :id, presence: true, uniqueness: true, numericality: true
   validates :studentCode, presence: true, uniqueness: true, numericality: true

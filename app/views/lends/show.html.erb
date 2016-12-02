@@ -1,26 +1,26 @@
 <div class="page-header">
-  <%= link_to loans_path, class: 'btn btn-default' do %>
+  <%= link_to lends_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
   <% end %>
-  <%= link_to edit_loan_path(@loan), class: 'btn btn-primary' do %>
+  <%= link_to edit_lend_path(@lend), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show loan</h1>
+  <h1>Show lend</h1>
 </div>
 
 <dl class="dl-horizontal">
   <dt>Date:</dt>
-  <dd><%= @loan.date %></dd>
+  <dd><%= @lend.date %></dd>
 
   <dt>Quantity:</dt>
-  <dd><%= @loan.quantity %></dd>
+  <dd><%= @lend.quantity %></dd>
 
   <dt>Student:</dt>
-  <dd><%= @loan.student %></dd>
+  <dd><%= @lend.student_id %></dd>
 
   <dt>Element:</dt>
-  <dd><%= @loan.element %></dd>
+  <dd><%= @lend.element_id %></dd>
 
 </dl>

@@ -1,4 +1,4 @@
-class ElementsController < ApplicationController
+class Api::ElementsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   before_action :set_element, only: [:show, :edit, :update, :destroy]
 
@@ -6,6 +6,7 @@ class ElementsController < ApplicationController
   # GET /elements.json
   def index
     @elements = Element.all
+    render json: @elements
   end
 
   # GET /elements/1
@@ -27,28 +28,20 @@ class ElementsController < ApplicationController
   def create
     @element = Element.new(element_params)
 
-    respond_to do |format|
-      if @element.save
-        format.html { redirect_to @element, notice: 'Elemento creado exitosamente.' }
-        format.json { render :show, status: :created, location: @element }
-      else
-        format.html { render :new }
-        format.json { render json: @element.errors, status: :unprocessable_entity }
-      end
+    if @element.save
+      render json: @element, status: :created
+    else
+      render json: @element.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /elements/1
   # PATCH/PUT /elements/1.json
   def update
-    respond_to do |format|
-      if @element.update(element_params)
-        format.html { redirect_to @element, notice: 'Elemento actualizado exitosamente.' }
-        format.json { render :show, status: :ok, location: @element }
-      else
-        format.html { render :edit }
-        format.json { render json: @element.errors, status: :unprocessable_entity }
-      end
+    if @element.update(element_params)
+       render json: @element, status: :ok
+    else
+      render json: @element.errors, status: :unprocessable_entity
     end
   end
 
@@ -56,10 +49,7 @@ class ElementsController < ApplicationController
   # DELETE /elements/1.json
   def destroy
     @element.destroy
-    respond_to do |format|
-      format.html { redirect_to elements_url, notice: 'Elemento borrado exitosamente.' }
-      format.json { head :no_content }
-    end
+    head :no_content
   end
 
   private

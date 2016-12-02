@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025164411) do
+ActiveRecord::Schema.define(version: 20161126200325) do
 
   create_table "elements", id: false, force: :cascade do |t|
     t.string   "id"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20161025164411) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["id"], name: "index_elements_on_id", unique: true
+  end
+
+  create_table "lends", force: :cascade do |t|
+    t.date     "date"
+    t.integer  "quantity"
+    t.string   "student_id"
+    t.string   "element_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "loans", force: :cascade do |t|
