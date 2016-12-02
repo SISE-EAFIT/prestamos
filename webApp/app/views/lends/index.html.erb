@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_lend_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Lend
+  <% end %>
+  <h1>Listing lends</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Date</th>
+            <th>Quantity</th>
+            <th>Student</th>
+            <th>Element</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @lends) do |lend| %>
+            <td><%= lend.date %></td>
+            <td><%= lend.quantity %></td>
+            <td><%= lend.student.name %></td>
+            <td><%= lend.element.name %></td>
+            <td><%= link_to 'Show', lend %></td>
+        <td><%= link_to 'Edit', edit_lend_path(lend) %></td>
+        <td><%= link_to 'Destroy', lend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

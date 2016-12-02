@@ -1,0 +1,58 @@
+
+  <div class="container">
+
+  <p id="notice"><%= notice %></p>
+  <h1>  Estudiantes </h1>
+  
+  <br>
+ <%= link_to new_student_path, class: 'btn btn-primary' do %>
+  <span class="glyphicon glyphicon-plus"></span>
+    Nuevo Estudiante
+  <% end %>
+  
+  
+  
+  <table><table class= "table table-bordered">
+    <thead>
+      <tr>
+        <th>Identificacion</th>
+        <th>Codigo estudiante</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Préstamos</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.id %></td>
+        <td><%= student.studentCode %></td>
+        <td><%= student.name %></td>
+        <td><%= student.email %></td>
+        <td><%= student.phone %></td>
+        <td><%= student.lends.count %></td>
+        <td><%= link_to 'Ver detalle', student %></td>
+        <td><%= link_to 'Editar', edit_student_path(student) %></td>
+        <td><%= link_to 'Eliminar', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+  
+</table>
+   
+  </div>
+  
+
+
+
+  
+   
+   
+   
+
+
+

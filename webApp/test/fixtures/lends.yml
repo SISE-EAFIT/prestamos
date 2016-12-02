@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-11-26
+  quantity: 1
+  student_id: MyString
+  element_id: MyString
+
+two:
+  date: 2016-11-26
+  quantity: 1
+  student_id: MyString
+  element_id: MyString
